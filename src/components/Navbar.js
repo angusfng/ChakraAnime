@@ -29,7 +29,7 @@ function Navbar() {
   };
 
   return (
-    <Flex py="3" px="6" bgColor="blue.600" justify="space-between">
+    <Flex py="3" px="6" bgColor="blue.900" justify="space-between">
       {logo && (
         <Box>
           <Heading as="h1" size="lg" color="white">
@@ -67,7 +67,7 @@ function Navbar() {
         <IconButton
           aria-label="Hamburger"
           variant="unstyled"
-          icon={<HamburgerIcon color="white" w="9" h="9" />}
+          icon={<HamburgerIcon color="white" boxSize={9} />}
         />
       )}
     </Flex>

@@ -1,4 +1,4 @@
-const animeGenreList = [
+export const animeGenreList = [
   {
     genreID: 1,
     genre: "Action"
@@ -21,154 +21,337 @@ const animeGenreList = [
   },
   {
     genreID: 6,
-    genre: "Action"
+    genre: "Demons"
   },
   {
     genreID: 7,
-    genre: "Action"
+    genre: "Mystery"
   },
   {
     genreID: 8,
-    genre: "Action"
+    genre: "Drama"
   },
   {
     genreID: 9,
-    genre: "Action"
+    genre: "Ecchi"
   },
   {
     genreID: 10,
-    genre: "Action"
+    genre: "Fantasy"
   },
   {
     genreID: 11,
-    genre: "Action"
+    genre: "Game"
   },
   {
     genreID: 12,
-    genre: "Action"
+    genre: "Hentai"
   },
   {
     genreID: 13,
-    genre: "Action"
+    genre: "Historical"
   },
   {
     genreID: 14,
-    genre: "Action"
+    genre: "Horror"
   },
   {
     genreID: 15,
-    genre: "Action"
+    genre: "Kids"
   },
   {
     genreID: 16,
-    genre: "Action"
+    genre: "Magic"
   },
   {
     genreID: 17,
-    genre: "Action"
+    genre: "Martial Arts"
   },
   {
     genreID: 18,
-    genre: "Action"
+    genre: "Mecha"
   },
   {
     genreID: 19,
-    genre: "Action"
+    genre: "Music"
   },
   {
     genreID: 20,
-    genre: "Action"
+    genre: "Parody"
   },
   {
     genreID: 21,
-    genre: "Action"
+    genre: "Samurai"
   },
   {
     genreID: 22,
-    genre: "Action"
+    genre: "Romance"
   },
   {
     genreID: 23,
-    genre: "Action"
+    genre: "School"
   },
   {
     genreID: 24,
-    genre: "Action"
+    genre: "Sci Fi"
   },
   {
     genreID: 25,
-    genre: "Action"
+    genre: "Shoujo"
   },
   {
     genreID: 26,
-    genre: "Action"
+    genre: "Shoujo Ai"
   },
   {
     genreID: 27,
-    genre: "Action"
+    genre: "Shounen"
   },
   {
     genreID: 28,
-    genre: "Action"
+    genre: "Shounen Ai"
   },
   {
     genreID: 29,
-    genre: "Action"
+    genre: "Space"
   },
   {
     genreID: 30,
-    genre: "Action"
+    genre: "Sports"
   },
   {
     genreID: 31,
-    genre: "Action"
+    genre: "Super Power"
   },
   {
     genreID: 32,
-    genre: "Action"
+    genre: "Vampire"
   },
   {
     genreID: 33,
-    genre: "Action"
+    genre: "Yaoi"
   },
   {
     genreID: 34,
-    genre: "Action"
+    genre: "Yuri"
   },
   {
     genreID: 35,
-    genre: "Action"
+    genre: "Harem"
   },
   {
     genreID: 36,
-    genre: "Action"
+    genre: "Slice Of Life"
   },
   {
     genreID: 37,
-    genre: "Action"
+    genre: "Supernatural"
   },
   {
     genreID: 38,
-    genre: "Action"
+    genre: "Military"
   },
   {
     genreID: 39,
-    genre: "Action"
+    genre: "Police"
   },
   {
     genreID: 40,
-    genre: "Action"
+    genre: "Psychological"
   },
   {
     genreID: 41,
-    genre: "Action"
+    genre: "Thriller"
   },
   {
     genreID: 42,
-    genre: "Action"
+    genre: "Seinen"
   },
   {
     genreID: 43,
+    genre: "Josei"
+  },
+]
+
+export const mangaGenreList = [
+  {
+    genreID: 1,
     genre: "Action"
+  },
+  {
+    genreID: 2,
+    genre: "Adventure"
+  },
+  {
+    genreID: 3,
+    genre: "Cars"
+  },
+  {
+    genreID: 4,
+    genre: "Comedy"
+  },
+  {
+    genreID: 5,
+    genre: "Dementia"
+  },
+  {
+    genreID: 6,
+    genre: "Demons"
+  },
+  {
+    genreID: 7,
+    genre: "Mystery"
+  },
+  {
+    genreID: 8,
+    genre: "Drama"
+  },
+  {
+    genreID: 9,
+    genre: "Ecchi"
+  },
+  {
+    genreID: 10,
+    genre: "Fantasy"
+  },
+  {
+    genreID: 11,
+    genre: "Game"
+  },
+  {
+    genreID: 12,
+    genre: "Hentai"
+  },
+  {
+    genreID: 13,
+    genre: "Historical"
+  },
+  {
+    genreID: 14,
+    genre: "Horror"
+  },
+  {
+    genreID: 15,
+    genre: "Kids"
+  },
+  {
+    genreID: 16,
+    genre: "Magic"
+  },
+  {
+    genreID: 17,
+    genre: "Martial Arts"
+  },
+  {
+    genreID: 18,
+    genre: "Mecha"
+  },
+  {
+    genreID: 19,
+    genre: "Music"
+  },
+  {
+    genreID: 20,
+    genre: "Parody"
+  },
+  {
+    genreID: 21,
+    genre: "Samurai"
+  },
+  {
+    genreID: 22,
+    genre: "Romance"
+  },
+  {
+    genreID: 23,
+    genre: "School"
+  },
+  {
+    genreID: 24,
+    genre: "Sci Fi"
+  },
+  {
+    genreID: 25,
+    genre: "Shoujo"
+  },
+  {
+    genreID: 26,
+    genre: "Shoujo Ai"
+  },
+  {
+    genreID: 27,
+    genre: "Shounen"
+  },
+  {
+    genreID: 28,
+    genre: "Shounen Ai"
+  },
+  {
+    genreID: 29,
+    genre: "Space"
+  },
+  {
+    genreID: 30,
+    genre: "Sports"
+  },
+  {
+    genreID: 31,
+    genre: "Super Power"
+  },
+  {
+    genreID: 32,
+    genre: "Vampire"
+  },
+  {
+    genreID: 33,
+    genre: "Yaoi"
+  },
+  {
+    genreID: 34,
+    genre: "Yuri"
+  },
+  {
+    genreID: 35,
+    genre: "Harem"
+  },
+  {
+    genreID: 36,
+    genre: "Slice Of Life"
+  },
+  {
+    genreID: 37,
+    genre: "Supernatural"
+  },
+  {
+    genreID: 38,
+    genre: "Military"
+  },
+  {
+    genreID: 39,
+    genre: "Police"
+  },
+  {
+    genreID: 40,
+    genre: "Psychological"
+  },
+  {
+    genreID: 41,
+    genre: "Seinen"
+  },
+  {
+    genreID: 42,
+    genre: "Josei"
+  },
+  {
+    genreID: 43,
+    genre: "Doujinshi"
+  },
+  {
+    genreID: 43,
+    genre: "Gender Bender"
+  },
+  {
+    genreID: 43,
+    genre: "Thriller"
   },
 ]

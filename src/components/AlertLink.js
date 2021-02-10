@@ -15,6 +15,8 @@ function AlertLink(props) {
         justifyContent="space-between"
         color="orange.400"
         my="1rem"
+        borderRadius="5px"
+        boxShadow="md"
       >
         <Heading as="h3" size="md">
           <LinkOverlay href="#">

@@ -6,9 +6,10 @@ function AlertHeading(props) {
     <Alert
       colorScheme="blue"
       variant="left-accent"
-      d="flex"
-      justifyContent="space-between"
-      color="blue.600"
+      color="blue.700"
+      my="1rem"
+      borderRadius="5px"
+      boxShadow="md"
     >
       <Heading as="h3" size="md">
         {props.children}
