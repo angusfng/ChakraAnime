@@ -7,9 +7,9 @@ function Welcome() {
   const [image] = useMediaQuery("(min-width: 1110px)");
 
   return (
-    <Flex h="28rem">
+    <Flex bgColor="blue.100" mt={4} h="28rem" borderRadius="10px" boxShadow="lg">
       <Flex alignItems="center">
-        <Box>
+        <Box px="4rem">
           <Heading as="h2" size="2xl" mb={4}>
             Welcome to the ChakraAnime database
           </Heading>
