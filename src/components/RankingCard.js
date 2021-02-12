@@ -12,7 +12,7 @@ function RankingCard() {
       borderRadius="10px"
     >
       <Image/>
-      <Heading as="h4">Test</Heading>
+      <Heading as="h4">Testing git change</Heading>
     </Box>
   );
 }
