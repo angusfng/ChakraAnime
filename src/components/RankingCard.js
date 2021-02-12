@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Heading, Image } from "@chakra-ui/react";
 
 function RankingCard() {
   return (
@@ -12,6 +12,7 @@ function RankingCard() {
       borderRadius="10px"
     >
       <Image/>
+      <Heading as="h4">Test</Heading>
     </Box>
   );
 }
