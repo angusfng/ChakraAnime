@@ -7,7 +7,7 @@ function Welcome() {
   const [image] = useMediaQuery("(min-width: 1110px)");
 
   return (
-    <Flex bgColor="blue.100" mt={4} h="28rem" borderRadius="10px" boxShadow="lg">
+    <Flex bg="blue.100" mt={4} h="28rem" borderRadius="10px" boxShadow="lg">
       <Flex alignItems="center">
         <Box px="4rem">
           <Heading as="h2" size="2xl" mb={4}>

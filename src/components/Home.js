@@ -13,6 +13,7 @@ import API from "../helpers/api";
 function Home() {
   const [airingAnime, setAiringAnime] = useState([]);
   const [upcomingAnime, setUpcomingAnime] = useState([]);
+  const [popularAnime, setPopularAnime] = useState([]);
 
   useEffect(() => {
     API.getPath("top/anime/1/airing").then((json) => {
@@ -21,12 +22,15 @@ function Home() {
     API.getPath("top/anime/1/upcoming").then((json) => {
       setUpcomingAnime(json.top.slice(0, 7));
     });
+    API.getPath("top/anime/1/bypopularity").then((json) => {
+      setPopularAnime(json.top.slice(0, 10));
+    });
   }, []);
 
   return (
-    <Flex flexGrow="1" bgColor="gray.50" justifyContent="center">
+    <Flex flexGrow="1" bg="gray.100" justifyContent="center">
       <Flex
-        bgColor="gray.50"
+        bg="gray.100"
         maxW="84rem"
         flexGrow="1"
         flexDirection="column"
@@ -83,8 +87,11 @@ function Home() {
             </Flex>
           </Box>
         </Grid>
-        <Flex h="20rem">
-          <RankingCard/>
+        <Flex flexDirection="column">
+          {console.log(popularAnime)}
+          {popularAnime.map((item, idx) =>(
+            <RankingCard key={idx} id={item.mal_id}/>
+          ))}
         </Flex>
       </Flex>
     </Flex>

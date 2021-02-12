@@ -29,7 +29,7 @@ function Navbar() {
   };
 
   return (
-    <Flex py="3" px="6" bgColor="blue.900" justify="space-between">
+    <Flex py="3" px="6" bg="blue.900" justify="space-between">
       {logo && (
         <Box>
           <Heading as="h1" size="lg" color="white">
