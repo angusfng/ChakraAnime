@@ -1,8 +1,12 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 
 function Footer() {
-  return <Box h="4rem" bg="blue.900"></Box>;
+  return (
+    <Flex h="8rem" bg="blue.900" alignItems="center" justifyContent="center">
+      <Text color="white">It's lit</Text>
+    </Flex>
+  );
 }
 
 export default Footer;

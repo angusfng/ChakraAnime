@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Flex, Box, Grid, OrderedList, ListItem } from "@chakra-ui/react";
+import { Flex, Box, Grid, UnorderedList, ListItem, Link } from "@chakra-ui/react";
 import AlertLink from "./AlertLink";
 import AlertHeading from "./AlertHeading";
 import Welcome from "./Welcome";
@@ -87,11 +87,18 @@ function Home() {
             </Flex>
           </Box>
         </Grid>
+        <Flex mt="1rem" justifyContent="space-between">
+          <Link href="#" fontWeight="semibold" fontSize="lg">Top 100 Most Popular Anime</Link>
+          <Link href="#" fontWeight="semibold" fontSize="md">View all</Link>
+        </Flex>
         <Flex flexDirection="column">
-          {console.log(popularAnime)}
-          {popularAnime.map((item, idx) =>(
-            <RankingCard key={idx} id={item.mal_id}/>
-          ))}
+          <UnorderedList>
+            {popularAnime.map((item, idx) =>(
+              <ListItem listStyleType="None">
+                <RankingCard key={idx} id={item.mal_id} idx={idx}/>
+              </ListItem>
+            ))}
+          </UnorderedList>
         </Flex>
       </Flex>
     </Flex>
