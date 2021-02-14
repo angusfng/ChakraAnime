@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Flex, Box, Grid, UnorderedList, ListItem, Link } from "@chakra-ui/react";
-import AlertLink from "./AlertLink";
-import AlertHeading from "./AlertHeading";
-import Welcome from "./Welcome";
-import GenreBox from "./GenreBox";
-import AnimeImage from "./AnimeImage";
-import RankingCard from "./RankingCard";
+import AlertLink from "../components/AlertLink";
+import AlertHeading from "../components/AlertHeading";
+import Welcome from "../components/Welcome";
+import GenreBox from "../components/GenreBox";
+import AnimeImage from "../components/AnimeImage";
+import RankingCard from "../components/RankingCard";
 import { animeGenreList, mangaGenreList } from "../helpers/data";
+import { Link as RouterLink } from "react-router-dom";
 
 import API from "../helpers/api";
 
@@ -88,14 +89,14 @@ function Home() {
           </Box>
         </Grid>
         <Flex mt="1rem" justifyContent="space-between">
-          <Link href="#" fontWeight="semibold" fontSize="lg">Top 100 Most Popular Anime</Link>
-          <Link href="#" fontWeight="semibold" fontSize="md">View all</Link>
+          <Link as={RouterLink} to="/search" fontWeight="semibold" fontSize="lg">Top 100 Most Popular Anime</Link>
+          <Link as={RouterLink} to="/search" fontWeight="semibold" fontSize="md">View all</Link>
         </Flex>
         <Flex flexDirection="column">
           <UnorderedList>
             {popularAnime.map((item, idx) =>(
-              <ListItem listStyleType="None">
-                <RankingCard key={idx} id={item.mal_id} idx={idx}/>
+              <ListItem key={idx} listStyleType="None">
+                <RankingCard  id={item.mal_id} idx={idx}/>
               </ListItem>
             ))}
           </UnorderedList>

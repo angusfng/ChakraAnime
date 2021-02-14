@@ -1,5 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Box, Image, Link, Flex, Tag, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Image,
+  Link,
+  Flex,
+  Tag,
+  Text,
+  LinkBox,
+  LinkOverlay,
+} from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import API from "../helpers/api";
 
 function RankingCard({ id, idx }) {
@@ -23,6 +33,7 @@ function RankingCard({ id, idx }) {
         setType(json.type);
         setEpisodes(json.episodes);
         setStatus(json.status);
+        console.log(json);
       }
     });
   }, [id]);
@@ -30,7 +41,9 @@ function RankingCard({ id, idx }) {
   return (
     <Flex>
       <Flex alignItems="center" justifyContent="center" w="2rem" mr="1rem">
-        <Text color="gray.400" fontWeight="bold" fontSize="1.5em">{`#${idx + 1}`}</Text>
+        <Text color="gray.400" fontWeight="bold" fontSize="1.5em">{`#${
+          idx + 1
+        }`}</Text>
       </Flex>
       <Flex
         flexGrow="1"
@@ -44,21 +57,43 @@ function RankingCard({ id, idx }) {
         ml="1rem"
       >
         <Flex>
-          <Image w="3rem" h="100%" src={image} />
+          <LinkBox>
+            <LinkOverlay as={RouterLink} to="/anime">
+              <Image w="3rem" h="100%" src={image} />
+            </LinkOverlay>
+          </LinkBox>
           <Box mx="1rem">
-            <Link fontWeight="semibold" size="sm" color="gray.600">
+            <Link
+              as={RouterLink}
+              to="/anime"
+              fontWeight="semibold"
+              size="sm"
+              color="gray.600"
+            >
               {title}
             </Link>
             <Flex mt="5px" flexWrap="wrap">
               {genres.map((genre, idx) => (
-                <Tag key={idx} colorScheme="orange" mr={2} mt={1}>
+                <Tag
+                  as={RouterLink}
+                  to="/search"
+                  key={idx}
+                  colorScheme="orange"
+                  mr={2}
+                  mt={1}
+                >
                   {genre.name}
                 </Tag>
               ))}
             </Flex>
           </Box>
         </Flex>
-        <Flex mx="3rem" w="45%" alignItems="center" justifyContent="space-between">
+        <Flex
+          mx="3rem"
+          w="45%"
+          alignItems="center"
+          justifyContent="space-between"
+        >
           <Box>
             <Text fontWeight="semibold" fontSize="0.9em" color="gray.600">
               {`${score} score`}

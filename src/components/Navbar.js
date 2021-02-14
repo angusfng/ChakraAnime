@@ -8,10 +8,13 @@ import {
   InputRightElement,
   Input,
   IconButton,
+  LinkBox,
+  LinkOverlay,
 } from "@chakra-ui/react";
 import { SearchIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { useMediaQuery } from "@chakra-ui/react";
 import styled from "styled-components";
+import { Link as RouterLink } from "react-router-dom";
 
 const StyledForm = styled.form`
   width: 78rem;
@@ -31,11 +34,13 @@ function Navbar() {
   return (
     <Flex py="3" px="6" bg="blue.900" justify="space-between">
       {logo && (
-        <Box>
+        <LinkBox>
           <Heading as="h1" size="lg" color="white">
-            ChakraAnime
+            <LinkOverlay as={RouterLink} to="/">
+              ChakraAnime
+            </LinkOverlay>
           </Heading>
-        </Box>
+        </LinkBox>
       )}
       <StyledForm onSubmit={searchHandler}>
         <InputGroup>

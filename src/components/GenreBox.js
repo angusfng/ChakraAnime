@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Text, LinkBox, LinkOverlay } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 
 function GenreBox(props) {
   const color = () => {
@@ -11,12 +12,18 @@ function GenreBox(props) {
 
   return (
     <LinkBox>
-      <Box bg={color} borderRadius="5px" mr="7px" my="7px" px="10px" py="7px" boxShadow="md">
-        <LinkOverlay href="#">
-          <Text fontSize="1.1em" color="white" fontWeight="semibold">
-            {props.children}
-          </Text>
-        </LinkOverlay>
+      <Box
+        bg={color}
+        borderRadius="5px"
+        mr="7px"
+        my="7px"
+        px="10px"
+        py="7px"
+        boxShadow="md"
+      >
+        <Text fontSize="1.1em" color="white" fontWeight="semibold">
+          <LinkOverlay as={RouterLink} to="/search">{props.children}</LinkOverlay>
+        </Text>
       </Box>
     </LinkBox>
   );

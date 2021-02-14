@@ -1,6 +1,7 @@
 import React from "react";
 import { Alert, Heading, LinkBox, LinkOverlay } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import { Link as RouterLink } from "react-router-dom";
 
 function AlertLink(props) {
   return (
@@ -19,7 +20,7 @@ function AlertLink(props) {
         boxShadow="md"
       >
         <Heading as="h3" size="md">
-          <LinkOverlay href="#">
+          <LinkOverlay as={RouterLink} to="/search">
             {props.children}
           </LinkOverlay>
         </Heading>

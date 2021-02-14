@@ -3,7 +3,7 @@ import { Flex, Text } from "@chakra-ui/react";
 
 function Footer() {
   return (
-    <Flex h="8rem" bg="blue.900" alignItems="center" justifyContent="center">
+    <Flex h="7rem" bg="blue.900" alignItems="center" justifyContent="center">
       <Text color="white">It's lit</Text>
     </Flex>
   );
