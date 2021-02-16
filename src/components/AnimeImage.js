@@ -2,7 +2,7 @@ import React from "react";
 import { LinkBox, Box, Image, LinkOverlay, Text } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 
-function AnimeImage({image_url, title, idx}) {
+function AnimeImage({ image_url, title, mal_id, idx }) {
   return (
     <LinkBox>
       <Box
@@ -15,12 +15,14 @@ function AnimeImage({image_url, title, idx}) {
           h="16rem"
           w="12rem"
           src={image_url}
-          alt={`Airing anime ${idx}`}
+          alt={`Anime ${idx}`}
           borderRadius="5px"
           boxShadow="md"
         />
-        <LinkOverlay as={RouterLink} to="/anime">
-          <Text fontWeight="semibold" mt={1}>{title}</Text>
+        <LinkOverlay as={RouterLink} to={`/anime/${mal_id}`}>
+          <Text fontWeight="semibold" mt={1}>
+            {title}
+          </Text>
         </LinkOverlay>
       </Box>
     </LinkBox>

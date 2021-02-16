@@ -13,7 +13,7 @@ function Navigation() {
       <Route exact path="/">
         <Home />
       </Route>
-      <Route exact path="/anime">
+      <Route exact path="/anime/:id">
         <AnimePage />
       </Route>
       <Route exact path="/search">

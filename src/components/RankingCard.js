@@ -12,7 +12,7 @@ import {
 import { Link as RouterLink } from "react-router-dom";
 import API from "../helpers/api";
 
-function RankingCard({ id, idx }) {
+function RankingCard({ id, idx, popularAnime }) {
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
   const [genres, setGenres] = useState([]);
@@ -33,10 +33,9 @@ function RankingCard({ id, idx }) {
         setType(json.type);
         setEpisodes(json.episodes);
         setStatus(json.status);
-        console.log(json);
       }
     });
-  }, [id]);
+  }, [id, popularAnime]);
 
   return (
     <Flex>

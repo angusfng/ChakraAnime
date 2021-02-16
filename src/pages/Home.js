@@ -29,9 +29,9 @@ function Home() {
   }, []);
 
   return (
-    <Flex flexGrow="1" bg="gray.100" justifyContent="center">
+    <Flex flexGrow="1" bg="gray.50" justifyContent="center">
       <Flex
-        bg="gray.100"
+        bg="gray.50"
         maxW="84rem"
         flexGrow="1"
         flexDirection="column"
@@ -48,6 +48,7 @@ function Home() {
               key={idx}
               image_url={item.image_url}
               title={item.title}
+              mal_id={item.mal_id}
               idx={idx}
             />
           ))}
@@ -62,6 +63,7 @@ function Home() {
               key={idx}
               image_url={item.image_url}
               title={item.title}
+              mal_id={item.mal_id}
               idx={idx}
             />
           ))}
@@ -92,11 +94,11 @@ function Home() {
           <Link as={RouterLink} to="/search" fontWeight="semibold" fontSize="lg">Top 100 Most Popular Anime</Link>
           <Link as={RouterLink} to="/search" fontWeight="semibold" fontSize="md">View all</Link>
         </Flex>
-        <Flex flexDirection="column">
+        <Flex flexDirection="column" mb="3rem">
           <UnorderedList>
             {popularAnime.map((item, idx) =>(
               <ListItem key={idx} listStyleType="None">
-                <RankingCard  id={item.mal_id} idx={idx}/>
+                <RankingCard id={item.mal_id} idx={idx} popularAnime={popularAnime}/>
               </ListItem>
             ))}
           </UnorderedList>
