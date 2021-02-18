@@ -57,14 +57,14 @@ function RankingCard({ id, idx, popularAnime }) {
       >
         <Flex>
           <LinkBox>
-            <LinkOverlay as={RouterLink} to="/anime">
+            <LinkOverlay as={RouterLink} to={`/anime/${id}`}>
               <Image w="3rem" h="100%" src={image} />
             </LinkOverlay>
           </LinkBox>
           <Box mx="1rem">
             <Link
               as={RouterLink}
-              to="/anime"
+              to={`/anime/${id}`}
               fontWeight="semibold"
               size="sm"
               color="gray.600"

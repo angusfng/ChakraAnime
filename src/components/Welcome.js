@@ -13,7 +13,7 @@ function Welcome() {
           <Heading as="h2" size="2xl" mb={4}>
             Welcome to the ChakraAnime database
           </Heading>
-          <Text fontSize="xl">Find your favourite anime and manga here!</Text>
+          <Text fontSize="xl">Find your favourite anime here!</Text>
           <Button size="lg" colorScheme="teal" mt="24px">
             Join us!
           </Button>
