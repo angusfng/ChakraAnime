@@ -18,6 +18,7 @@ function AnimeImage({ image_url, title, mal_id, idx }) {
           alt={`Anime ${idx}`}
           borderRadius="5px"
           boxShadow="md"
+          objectFit="cover"
         />
         <LinkOverlay as={RouterLink} to={`/anime/${mal_id}`}>
           <Text fontWeight="semibold" mt={1}>
