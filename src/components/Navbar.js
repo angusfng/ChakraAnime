@@ -14,7 +14,7 @@ import {
 import { SearchIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { useMediaQuery } from "@chakra-ui/react";
 import styled from "styled-components";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useHistory } from "react-router-dom";
 
 const StyledForm = styled.form`
   width: 78rem;
@@ -25,10 +25,14 @@ function Navbar() {
   const [hamburger] = useMediaQuery("(min-width: 1110px)");
   const [logo] = useMediaQuery("(min-width: 350px)");
   const [searchText, setSearchText] = useState("");
+  let history = useHistory();
 
   const searchHandler = (e) => {
     e.preventDefault();
-    console.log(searchText);
+    if (searchText) {
+      history.push(`/search/anime/${searchText}`);
+      setSearchText("");
+    }
   };
 
   return (
@@ -51,6 +55,7 @@ function Navbar() {
               setSearchText(e.target.value);
             }}
             color="white"
+            value={searchText}
           />
           <InputRightElement
             children={

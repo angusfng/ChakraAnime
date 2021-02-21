@@ -14,7 +14,6 @@ function CharacterCard(props) {
     }
   }, [props.json.voice_actors]);
 
-  console.log(props);
   return (
     <Flex
       bg="white"

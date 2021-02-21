@@ -31,7 +31,6 @@ function Home() {
   return (
     <Flex flexGrow="1" bg="gray.50" justifyContent="center">
       <Flex
-        bg="gray.50"
         maxW="84rem"
         flexGrow="1"
         flexDirection="column"

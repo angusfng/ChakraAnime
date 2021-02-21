@@ -42,7 +42,7 @@ function AnimePage() {
       setRecommendations(j.recommendations.slice(0, 7));
     });
     API.getPath(`anime/${id}/characters_staff`).then((j) => {
-      setCharacters(j.characters.slice(0, 10));
+      setCharacters(j.characters.slice(0, 12));
     });
   }, [id]);
 
