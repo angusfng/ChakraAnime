@@ -16,7 +16,7 @@ function Navigation() {
       <Route exact path="/anime/:id">
         <AnimePage />
       </Route>
-      <Route exact path="/search/anime/:type">
+      <Route exact path="/search/anime/:query">
         <SearchPage />
       </Route>
     </Switch>
