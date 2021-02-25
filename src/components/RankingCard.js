@@ -24,6 +24,7 @@ function RankingCard({ id, idx, popularAnime }) {
 
   useEffect(() => {
     API.getPath(`anime/${id}`).then((json) => {
+      console.log(json);
       if (json) {
         setTitle(json.title);
         setImage(json.image_url);
@@ -75,7 +76,7 @@ function RankingCard({ id, idx, popularAnime }) {
               {genres.map((genre, idx) => (
                 <Tag
                   as={RouterLink}
-                  to="/search"
+                  to={`/search/genre/${genre.mal_id}`}
                   key={idx}
                   colorScheme="orange"
                   mr={2}

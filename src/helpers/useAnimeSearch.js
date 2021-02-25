@@ -5,8 +5,6 @@ function useAnimeSearch(query, page) {
   const [anime, setAnime] = useState([]);
   const [hasMore, setHasMore] = useState(false);
 
-  console.log(page);
-
   useEffect(() => {
     setAnime([]);
   }, [query]);

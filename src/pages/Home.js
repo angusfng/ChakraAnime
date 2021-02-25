@@ -37,7 +37,7 @@ function Home() {
         px="1rem"
       >
         <Welcome />
-        <AlertLink>Airing Anime</AlertLink>
+        <AlertLink type="topAiring">Airing Anime</AlertLink>
         <Grid
           templateColumns="repeat(auto-fit, minmax(10rem, 1fr))"
           gap={3}
@@ -52,7 +52,7 @@ function Home() {
             />
           ))}
         </Grid>
-        <AlertLink>Upcoming Anime</AlertLink>
+        <AlertLink type="topUpcoming">Upcoming Anime</AlertLink>
         <Grid
           templateColumns="repeat(auto-fit, minmax(10rem, 1fr))"
           gap={3}
@@ -72,7 +72,7 @@ function Home() {
             <AlertHeading>Anime</AlertHeading>
             <Flex flexWrap="wrap">
               {animeGenreList.map((item, idx) => (
-                <GenreBox key={idx} color={idx}>
+                <GenreBox key={idx} color={idx} id={item.genreID}>
                   {item.genre}
                 </GenreBox>
               ))}
@@ -82,7 +82,7 @@ function Home() {
             <AlertHeading>Manga</AlertHeading>
             <Flex flexWrap="wrap">
               {mangaGenreList.map((item, idx) => (
-                <GenreBox key={idx} color={idx}>
+                <GenreBox key={idx} color={idx} id={item.genreID}>
                   {item.genre}
                 </GenreBox>
               ))}
@@ -90,8 +90,8 @@ function Home() {
           </Box>
         </Grid>
         <Flex mt="1rem" justifyContent="space-between">
-          <Link as={RouterLink} to="/search" fontWeight="semibold" fontSize="lg">Top 100 Most Popular Anime</Link>
-          <Link as={RouterLink} to="/search" fontWeight="semibold" fontSize="md">View all</Link>
+          <Link as={RouterLink} to="/search/topPopularity/None" fontWeight="semibold" fontSize="lg">Top 100 Most Popular Anime</Link>
+          <Link as={RouterLink} to="/search/topPopularity/None" fontWeight="semibold" fontSize="md">View all</Link>
         </Flex>
         <Flex flexDirection="column" mb="3rem">
           <UnorderedList>

@@ -20,7 +20,7 @@ function AlertLink(props) {
         boxShadow="md"
       >
         <Heading as="h3" size="md">
-          <LinkOverlay as={RouterLink} to="/search">
+          <LinkOverlay as={RouterLink} to={`/search/${props.type}/None`}>
             {props.children}
           </LinkOverlay>
         </Heading>
