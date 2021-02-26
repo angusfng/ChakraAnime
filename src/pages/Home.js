@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Flex, Box, Grid, UnorderedList, ListItem, Link } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Grid,
+  UnorderedList,
+  ListItem,
+  Link,
+} from "@chakra-ui/react";
 import AlertLink from "../components/AlertLink";
 import AlertHeading from "../components/AlertHeading";
 import Welcome from "../components/Welcome";
@@ -18,30 +25,28 @@ function Home() {
 
   useEffect(() => {
     API.getPath("top/anime/1/airing").then((json) => {
-      setAiringAnime(json.top.slice(0, 7));
+      if (json) {
+        setAiringAnime(json.top.slice(0, 7));
+      }
     });
     API.getPath("top/anime/1/upcoming").then((json) => {
-      setUpcomingAnime(json.top.slice(0, 7));
+      if (json) {
+        setUpcomingAnime(json.top.slice(0, 7));
+      }
     });
     API.getPath("top/anime/1/bypopularity").then((json) => {
-      setPopularAnime(json.top.slice(0, 10));
+      if (json) {
+        setPopularAnime(json.top.slice(0, 10));
+      }
     });
   }, []);
 
   return (
     <Flex flexGrow="1" bg="gray.50" justifyContent="center">
-      <Flex
-        maxW="84rem"
-        flexGrow="1"
-        flexDirection="column"
-        px="1rem"
-      >
+      <Flex maxW="84rem" flexGrow="1" flexDirection="column" px="1rem">
         <Welcome />
         <AlertLink type="topAiring">Airing Anime</AlertLink>
-        <Grid
-          templateColumns="repeat(auto-fit, minmax(10rem, 1fr))"
-          gap={3}
-        >
+        <Grid templateColumns="repeat(auto-fit, minmax(10rem, 1fr))" gap={3}>
           {airingAnime.map((item, idx) => (
             <AnimeImage
               key={idx}
@@ -49,14 +54,14 @@ function Home() {
               title={item.title}
               mal_id={item.mal_id}
               idx={idx}
+              score={item.score}
+              type={item.type}
+              episodes={item.episodes}
             />
           ))}
         </Grid>
         <AlertLink type="topUpcoming">Upcoming Anime</AlertLink>
-        <Grid
-          templateColumns="repeat(auto-fit, minmax(10rem, 1fr))"
-          gap={3}
-        >
+        <Grid templateColumns="repeat(auto-fit, minmax(10rem, 1fr))" gap={3}>
           {upcomingAnime.map((item, idx) => (
             <AnimeImage
               key={idx}
@@ -64,6 +69,9 @@ function Home() {
               title={item.title}
               mal_id={item.mal_id}
               idx={idx}
+              score={item.score}
+              type={item.type}
+              episodes={item.episodes}
             />
           ))}
         </Grid>
@@ -90,14 +98,32 @@ function Home() {
           </Box>
         </Grid>
         <Flex mt="1rem" justifyContent="space-between">
-          <Link as={RouterLink} to="/search/topPopularity/None" fontWeight="semibold" fontSize="lg">Top 100 Most Popular Anime</Link>
-          <Link as={RouterLink} to="/search/topPopularity/None" fontWeight="semibold" fontSize="md">View all</Link>
+          <Link
+            as={RouterLink}
+            to="/search/topPopularity/None"
+            fontWeight="semibold"
+            fontSize="lg"
+          >
+            Top 100 Most Popular Anime
+          </Link>
+          <Link
+            as={RouterLink}
+            to="/search/topPopularity/None"
+            fontWeight="semibold"
+            fontSize="md"
+          >
+            View all
+          </Link>
         </Flex>
         <Flex flexDirection="column" mb="3rem">
           <UnorderedList>
-            {popularAnime.map((item, idx) =>(
+            {popularAnime.map((item, idx) => (
               <ListItem key={idx} listStyleType="None">
-                <RankingCard id={item.mal_id} idx={idx} popularAnime={popularAnime}/>
+                <RankingCard
+                  id={item.mal_id}
+                  idx={idx}
+                  popularAnime={popularAnime}
+                />
               </ListItem>
             ))}
           </UnorderedList>

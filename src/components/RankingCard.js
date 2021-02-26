@@ -24,7 +24,6 @@ function RankingCard({ id, idx, popularAnime }) {
 
   useEffect(() => {
     API.getPath(`anime/${id}`).then((json) => {
-      console.log(json);
       if (json) {
         setTitle(json.title);
         setImage(json.image_url);

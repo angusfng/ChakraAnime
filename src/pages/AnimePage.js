@@ -19,6 +19,7 @@ import InformationCardOne from "../components/InformationCardOne";
 import InformationCardTwo from "../components/InformationCardTwo";
 import AnimeImage from "../components/AnimeImage";
 import CharacterCard from "../components/CharacterCard";
+import ScrollToTop from "../helpers/ScrollToTop";
 
 function AnimePage() {
   let { id } = useParams();
@@ -47,84 +48,87 @@ function AnimePage() {
   }, [id]);
 
   return (
-    <Flex
-      flexDirection="column"
-      color="gray.700"
-      flexGrow="1"
-      alignItems="center"
-      bg="gray.50"
-    >
-      <Center w="100%" p="1rem" color="gray.600">
-        <Box w="100%" maxW="84rem">
-          <Heading as="h1" size="lg" mb="1rem">
-            {json.title}
-          </Heading>
-          <Heading as="h1" size="md">
-            {json.title_japanese}
-          </Heading>
-        </Box>
-      </Center>
-      <Tabs w="100%" maxW="84rem">
-        <TabList>
-          <Tab>Overview</Tab>
-          <Tab>Characters</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
-            <Grid
-              templateColumns="repeat(auto-fit, minmax(20rem, 1fr))"
-              gap={3}
-            >
-              <InformationCardOne
-                json={json}
-                aired={aired}
-                genres={genres}
-                studios={studios}
-              />
-              <InformationCardTwo title="Watch Trailer">
-                <AspectRatio maxW="100%" ratio={16 / 9}>
-                  <iframe
-                    title="Anime trailer"
-                    src={json.trailer_url}
-                    allowFullScreen
-                  />
-                </AspectRatio>
+    <>
+      <ScrollToTop />
+      <Flex
+        flexDirection="column"
+        color="gray.700"
+        flexGrow="1"
+        alignItems="center"
+        bg="gray.50"
+      >
+        <Center w="100%" p="1rem" color="gray.600">
+          <Box w="100%" maxW="84rem">
+            <Heading as="h1" size="lg" mb="1rem">
+              {json.title}
+            </Heading>
+            <Heading as="h1" size="md">
+              {json.title_japanese}
+            </Heading>
+          </Box>
+        </Center>
+        <Tabs w="100%" maxW="84rem">
+          <TabList>
+            <Tab>Overview</Tab>
+            <Tab>Characters</Tab>
+          </TabList>
+          <TabPanels>
+            <TabPanel>
+              <Grid
+                templateColumns="repeat(auto-fit, minmax(20rem, 1fr))"
+                gap={3}
+              >
+                <InformationCardOne
+                  json={json}
+                  aired={aired}
+                  genres={genres}
+                  studios={studios}
+                />
+                <InformationCardTwo title="Watch Trailer">
+                  <AspectRatio maxW="100%" ratio={16 / 9}>
+                    <iframe
+                      title="Anime trailer"
+                      src={json.trailer_url}
+                      allowFullScreen
+                    />
+                  </AspectRatio>
+                </InformationCardTwo>
+              </Grid>
+              <InformationCardTwo title="Description" mt="1rem">
+                <Text>{json.synopsis}</Text>
               </InformationCardTwo>
-            </Grid>
-            <InformationCardTwo title="Description" mt="1rem">
-              <Text>{json.synopsis}</Text>
-            </InformationCardTwo>
-          </TabPanel>
-          <TabPanel>
-            <Flex flexWrap="wrap">
-              {characters.map((char, idx) => (
-                <CharacterCard key={idx} json={char}/>
-              ))}
-            </Flex>
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
-      <Box w="100%" maxW="84rem" mt="1rem" p="1rem">
-        <Heading as="h3" fontSize="1.5em">
-          Recommendations
-        </Heading>
-        <Grid
-          templateColumns="repeat(auto-fit, minmax(10rem, 1fr))"
-          gap={3}
-          my="2rem"
-        >
-          {recommendations.map((rec, idx) => (
-            <AnimeImage
-              key={idx}
-              image_url={rec.image_url}
-              title={rec.title}
-              mal_id={rec.mal_id}
-              idx={idx}
-            />
-          ))}
-        </Grid>
-      </Box>
-    </Flex>
+            </TabPanel>
+            <TabPanel>
+              <Flex flexWrap="wrap">
+                {characters.map((char, idx) => (
+                  <CharacterCard key={idx} json={char} />
+                ))}
+              </Flex>
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+        <Box w="100%" maxW="84rem" mt="1rem" p="1rem">
+          <Heading as="h3" fontSize="1.5em">
+            Recommendations
+          </Heading>
+          <Grid
+            templateColumns="repeat(auto-fit, minmax(10rem, 1fr))"
+            gap={3}
+            my="2rem"
+          >
+            {recommendations.map((rec, idx) => (
+              <AnimeImage
+                key={idx}
+                image_url={rec.image_url}
+                title={rec.title}
+                mal_id={rec.mal_id}
+                idx={idx}
+              />
+            ))}
+          </Grid>
+        </Box>
+      </Flex>
+    </>
   );
 }
 

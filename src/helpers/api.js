@@ -25,21 +25,6 @@ class API {
     };
     return getJSON(`${this.url}/${path}`, options);
   }
-
-  // Don't want to get banned
-  getPathRetry = async (path, n) => {
-    const options = {
-      method: "GET",
-    };
-    try {
-      return await fetch(`${this.url}/${path}`, options);
-    } catch {
-      if (n === 0) {
-        return;
-      }
-      return await this.getPathRetry(path, n - 1);
-    }
-  };
 }
 
 export default new API();
