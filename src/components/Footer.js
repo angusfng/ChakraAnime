@@ -1,10 +1,36 @@
 import React from "react";
-import { Flex, Text } from "@chakra-ui/react";
+import {
+  Flex,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+} from "@chakra-ui/react";
 
 function Footer() {
   return (
-    <Flex h="7rem" bg="blue.900" alignItems="center" justifyContent="center">
-      <Text color="white">It's lit</Text>
+    <Flex
+      h="7rem"
+      bg="blue.900"
+      alignItems="center"
+      justifyContent="center"
+      color="white"
+    >
+      <Breadcrumb>
+        <BreadcrumbItem>
+          <BreadcrumbLink
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
+            Home
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="https://github.com/angusfng">
+            Github
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
     </Flex>
   );
 }

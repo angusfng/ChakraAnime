@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Box, Heading, Text, Button, Image } from "@chakra-ui/react";
 import { useMediaQuery } from "@chakra-ui/react";
 import kakashi from "../images/kakashi.png";
+import { Link as RouterLink } from "react-router-dom";
 
 function Welcome() {
   const [image] = useMediaQuery("(min-width: 1110px)");
@@ -14,7 +15,7 @@ function Welcome() {
             Welcome to the ChakraAnime database
           </Heading>
           <Text fontSize="xl">Find your favourite anime here!</Text>
-          <Button size="lg" colorScheme="teal" mt="24px">
+          <Button size="lg" colorScheme="teal" mt="24px" as={RouterLink} to="/register">
             Join us!
           </Button>
         </Box>

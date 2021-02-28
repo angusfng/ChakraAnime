@@ -15,7 +15,7 @@ const MyForm = styled.form`
   width: 100%;
 `;
 
-function Register() {
+function Login() {
   let history = useHistory();
 
   const handleSubmit = () => {
@@ -42,28 +42,20 @@ function Register() {
         my="1rem"
       >
         <Heading textAlign="center" mb="2rem">
-          Sign Up
+          Login
         </Heading>
         <MyForm onSubmit={handleSubmit}>
-          <FormControl id="register-email" my="1rem">
+          <FormControl id="login-email" my="1rem">
             <FormLabel>Email address</FormLabel>
             <Input placeholder="Email address" type="email" />
           </FormControl>
-          <FormControl id="register-username" my="1rem">
-            <FormLabel>Username</FormLabel>
-            <Input placeholder="Username" type="text" />
-          </FormControl>
-          <FormControl id="register-password" my="1rem">
+          <FormControl id="login-password" my="1rem">
             <FormLabel>Password</FormLabel>
             <Input placeholder="Password" type="password" />
           </FormControl>
-          <FormControl id="register-confirmpass" my="1rem">
-            <FormLabel>Confirm Password</FormLabel>
-            <Input placeholder="Confirm Password" type="password" />
-          </FormControl>
           <Flex justifyContent="center">
             <Button colorScheme="teal" type="submit" my="1rem">
-              Sign Up
+              Login
             </Button>
           </Flex>
         </MyForm>
@@ -73,4 +65,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Login;

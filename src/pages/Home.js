@@ -15,13 +15,14 @@ import AnimeImage from "../components/AnimeImage";
 import RankingCard from "../components/RankingCard";
 import { animeGenreList, mangaGenreList } from "../helpers/data";
 import { Link as RouterLink } from "react-router-dom";
-
+import { useMediaQuery } from "@chakra-ui/react";
 import API from "../helpers/api";
 
 function Home() {
   const [airingAnime, setAiringAnime] = useState([]);
   const [upcomingAnime, setUpcomingAnime] = useState([]);
   const [popularAnime, setPopularAnime] = useState([]);
+  const [minpop] = useMediaQuery("(min-width: 1200px)");
 
   useEffect(() => {
     API.getPath("top/anime/1/airing").then((json) => {
@@ -75,7 +76,7 @@ function Home() {
             />
           ))}
         </Grid>
-        <Grid templateColumns="repeat(auto-fit, minmax(12rem, 1fr))" gap={4}>
+        <Grid templateColumns="repeat(auto-fit, minmax(12rem, 1fr))" gap={4} mb="2rem">
           <Box>
             <AlertHeading>Anime</AlertHeading>
             <Flex flexWrap="wrap">
@@ -97,37 +98,41 @@ function Home() {
             </Flex>
           </Box>
         </Grid>
-        <Flex mt="1rem" justifyContent="space-between">
-          <Link
-            as={RouterLink}
-            to="/search/topPopularity/None"
-            fontWeight="semibold"
-            fontSize="lg"
-          >
-            Top 100 Most Popular Anime
-          </Link>
-          <Link
-            as={RouterLink}
-            to="/search/topPopularity/None"
-            fontWeight="semibold"
-            fontSize="md"
-          >
-            View all
-          </Link>
-        </Flex>
-        <Flex flexDirection="column" mb="3rem">
-          <UnorderedList>
-            {popularAnime.map((item, idx) => (
-              <ListItem key={idx} listStyleType="None">
-                <RankingCard
-                  id={item.mal_id}
-                  idx={idx}
-                  popularAnime={popularAnime}
-                />
-              </ListItem>
-            ))}
-          </UnorderedList>
-        </Flex>
+        {minpop && (
+          <>
+            <Flex mt="1rem" justifyContent="space-between">
+              <Link
+                as={RouterLink}
+                to="/search/topPopularity/None"
+                fontWeight="semibold"
+                fontSize="lg"
+              >
+                Top 100 Most Popular Anime
+              </Link>
+              <Link
+                as={RouterLink}
+                to="/search/topPopularity/None"
+                fontWeight="semibold"
+                fontSize="md"
+              >
+                View all
+              </Link>
+            </Flex>
+            <Flex flexDirection="column" mb="3rem">
+              <UnorderedList>
+                {popularAnime.map((item, idx) => (
+                  <ListItem key={idx} listStyleType="None">
+                    <RankingCard
+                      id={item.mal_id}
+                      idx={idx}
+                      popularAnime={popularAnime}
+                    />
+                  </ListItem>
+                ))}
+              </UnorderedList>
+            </Flex>
+          </>
+        )}
       </Flex>
     </Flex>
   );
