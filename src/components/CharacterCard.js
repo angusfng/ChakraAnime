@@ -24,22 +24,22 @@ function CharacterCard(props) {
       justifyContent="space-between"
     >
       <Flex w="50%">
-        <Image src={props.json.image_url} objectFit="cover" w="3.5rem"/>
+        <Image src={props.json.image_url} objectFit="cover" w="3.5rem" />
         <Flex flexDirection="column" justifyContent="space-between" p="0.5rem">
           <Text fontSize="xs">{props.json.name}</Text>
-          <Text fontSize="xs" color="gray.500">{props.json.role}</Text>
+          <Text fontSize="xs" color="gray.500">
+            {props.json.role}
+          </Text>
         </Flex>
       </Flex>
       <Flex w="50%" justifyContent="flex-end" textAlign="right">
         <Flex flexDirection="column" justifyContent="space-between" p="0.5rem">
           <Text fontSize="xs">{va.name}</Text>
-          <Text fontSize="xs" color="gray.500">{va.language}</Text>
+          <Text fontSize="xs" color="gray.500">
+            {va.language}
+          </Text>
         </Flex>
-        <Image
-          src={va.image_url}
-          objectFit="cover"
-          w="3.5rem"
-        />
+        <Image src={va.image_url} objectFit="cover" w="3.5rem" />
       </Flex>
     </Flex>
   );

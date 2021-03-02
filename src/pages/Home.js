@@ -76,7 +76,11 @@ function Home() {
             />
           ))}
         </Grid>
-        <Grid templateColumns="repeat(auto-fit, minmax(12rem, 1fr))" gap={4} mb="2rem">
+        <Grid
+          templateColumns="repeat(auto-fit, minmax(12rem, 1fr))"
+          gap={4}
+          mb="2rem"
+        >
           <Box>
             <AlertHeading>Anime</AlertHeading>
             <Flex flexWrap="wrap">

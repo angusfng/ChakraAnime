@@ -22,7 +22,9 @@ function GenreBox(props) {
         boxShadow="md"
       >
         <Text fontSize="1.1em" color="white" fontWeight="semibold">
-          <LinkOverlay as={RouterLink} to={`/search/genre/${props.id}`}>{props.children}</LinkOverlay>
+          <LinkOverlay as={RouterLink} to={`/search/genre/${props.id}`}>
+            {props.children}
+          </LinkOverlay>
         </Text>
       </Box>
     </LinkBox>

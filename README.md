@@ -6,17 +6,19 @@ View the site at: https://chakraanime.netlify.app/
 ![](demo.gif)
 
 ## Features
-* Search functionality by keyword with infinite scrolling (capped to prevent over requesting)
-* Search anime by top airing, top upcoming, most popular and genre
-* Anime description popover when an image is hovered
-* Accessible navbar with hamburger menu
-* Information tabs and similar anime recommendations on anime page
-* Dummy login and register pages
+
+- Search functionality by keyword with infinite scrolling (capped to prevent over requesting)
+- Search anime by top airing, top upcoming, most popular and genre
+- Anime description popover when an image is hovered
+- Accessible navbar with hamburger menu
+- Information tabs and similar anime recommendations on anime page
+- Dummy login and register pages
 
 ## Built With
-* [React.js](https://reactjs.org/)
-* [Chakra UI](https://chakra-ui.com/)
-* [Jikan API](https://jikan.moe/)
+
+- [React.js](https://reactjs.org/)
+- [Chakra UI](https://chakra-ui.com/)
+- [Jikan API](https://jikan.moe/)
 
 ## Available Scripts
 
@@ -46,11 +48,12 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Roadmap
+
 These are some extra features that may be implemented in the future
 
-* View manga
-* Add more data to anime page
-* Add more data to popover
-* Account system
-* Favourite an anime
-* Search suggestions
+- View manga
+- Add more data to anime page
+- Add more data to popover
+- Account system
+- Favourite an anime
+- Search suggestions

@@ -1,357 +1,357 @@
 export const animeGenreList = [
   {
     genreID: 1,
-    genre: "Action"
+    genre: "Action",
   },
   {
     genreID: 2,
-    genre: "Adventure"
+    genre: "Adventure",
   },
   {
     genreID: 3,
-    genre: "Cars"
+    genre: "Cars",
   },
   {
     genreID: 4,
-    genre: "Comedy"
+    genre: "Comedy",
   },
   {
     genreID: 5,
-    genre: "Dementia"
+    genre: "Dementia",
   },
   {
     genreID: 6,
-    genre: "Demons"
+    genre: "Demons",
   },
   {
     genreID: 7,
-    genre: "Mystery"
+    genre: "Mystery",
   },
   {
     genreID: 8,
-    genre: "Drama"
+    genre: "Drama",
   },
   {
     genreID: 9,
-    genre: "Ecchi"
+    genre: "Ecchi",
   },
   {
     genreID: 10,
-    genre: "Fantasy"
+    genre: "Fantasy",
   },
   {
     genreID: 11,
-    genre: "Game"
+    genre: "Game",
   },
   {
     genreID: 12,
-    genre: "Hentai"
+    genre: "Hentai",
   },
   {
     genreID: 13,
-    genre: "Historical"
+    genre: "Historical",
   },
   {
     genreID: 14,
-    genre: "Horror"
+    genre: "Horror",
   },
   {
     genreID: 15,
-    genre: "Kids"
+    genre: "Kids",
   },
   {
     genreID: 16,
-    genre: "Magic"
+    genre: "Magic",
   },
   {
     genreID: 17,
-    genre: "Martial Arts"
+    genre: "Martial Arts",
   },
   {
     genreID: 18,
-    genre: "Mecha"
+    genre: "Mecha",
   },
   {
     genreID: 19,
-    genre: "Music"
+    genre: "Music",
   },
   {
     genreID: 20,
-    genre: "Parody"
+    genre: "Parody",
   },
   {
     genreID: 21,
-    genre: "Samurai"
+    genre: "Samurai",
   },
   {
     genreID: 22,
-    genre: "Romance"
+    genre: "Romance",
   },
   {
     genreID: 23,
-    genre: "School"
+    genre: "School",
   },
   {
     genreID: 24,
-    genre: "Sci Fi"
+    genre: "Sci Fi",
   },
   {
     genreID: 25,
-    genre: "Shoujo"
+    genre: "Shoujo",
   },
   {
     genreID: 26,
-    genre: "Shoujo Ai"
+    genre: "Shoujo Ai",
   },
   {
     genreID: 27,
-    genre: "Shounen"
+    genre: "Shounen",
   },
   {
     genreID: 28,
-    genre: "Shounen Ai"
+    genre: "Shounen Ai",
   },
   {
     genreID: 29,
-    genre: "Space"
+    genre: "Space",
   },
   {
     genreID: 30,
-    genre: "Sports"
+    genre: "Sports",
   },
   {
     genreID: 31,
-    genre: "Super Power"
+    genre: "Super Power",
   },
   {
     genreID: 32,
-    genre: "Vampire"
+    genre: "Vampire",
   },
   {
     genreID: 33,
-    genre: "Yaoi"
+    genre: "Yaoi",
   },
   {
     genreID: 34,
-    genre: "Yuri"
+    genre: "Yuri",
   },
   {
     genreID: 35,
-    genre: "Harem"
+    genre: "Harem",
   },
   {
     genreID: 36,
-    genre: "Slice Of Life"
+    genre: "Slice Of Life",
   },
   {
     genreID: 37,
-    genre: "Supernatural"
+    genre: "Supernatural",
   },
   {
     genreID: 38,
-    genre: "Military"
+    genre: "Military",
   },
   {
     genreID: 39,
-    genre: "Police"
+    genre: "Police",
   },
   {
     genreID: 40,
-    genre: "Psychological"
+    genre: "Psychological",
   },
   {
     genreID: 41,
-    genre: "Thriller"
+    genre: "Thriller",
   },
   {
     genreID: 42,
-    genre: "Seinen"
+    genre: "Seinen",
   },
   {
     genreID: 43,
-    genre: "Josei"
+    genre: "Josei",
   },
-]
+];
 
 export const mangaGenreList = [
   {
     genreID: 1,
-    genre: "Action"
+    genre: "Action",
   },
   {
     genreID: 2,
-    genre: "Adventure"
+    genre: "Adventure",
   },
   {
     genreID: 3,
-    genre: "Cars"
+    genre: "Cars",
   },
   {
     genreID: 4,
-    genre: "Comedy"
+    genre: "Comedy",
   },
   {
     genreID: 5,
-    genre: "Dementia"
+    genre: "Dementia",
   },
   {
     genreID: 6,
-    genre: "Demons"
+    genre: "Demons",
   },
   {
     genreID: 7,
-    genre: "Mystery"
+    genre: "Mystery",
   },
   {
     genreID: 8,
-    genre: "Drama"
+    genre: "Drama",
   },
   {
     genreID: 9,
-    genre: "Ecchi"
+    genre: "Ecchi",
   },
   {
     genreID: 10,
-    genre: "Fantasy"
+    genre: "Fantasy",
   },
   {
     genreID: 11,
-    genre: "Game"
+    genre: "Game",
   },
   {
     genreID: 12,
-    genre: "Hentai"
+    genre: "Hentai",
   },
   {
     genreID: 13,
-    genre: "Historical"
+    genre: "Historical",
   },
   {
     genreID: 14,
-    genre: "Horror"
+    genre: "Horror",
   },
   {
     genreID: 15,
-    genre: "Kids"
+    genre: "Kids",
   },
   {
     genreID: 16,
-    genre: "Magic"
+    genre: "Magic",
   },
   {
     genreID: 17,
-    genre: "Martial Arts"
+    genre: "Martial Arts",
   },
   {
     genreID: 18,
-    genre: "Mecha"
+    genre: "Mecha",
   },
   {
     genreID: 19,
-    genre: "Music"
+    genre: "Music",
   },
   {
     genreID: 20,
-    genre: "Parody"
+    genre: "Parody",
   },
   {
     genreID: 21,
-    genre: "Samurai"
+    genre: "Samurai",
   },
   {
     genreID: 22,
-    genre: "Romance"
+    genre: "Romance",
   },
   {
     genreID: 23,
-    genre: "School"
+    genre: "School",
   },
   {
     genreID: 24,
-    genre: "Sci Fi"
+    genre: "Sci Fi",
   },
   {
     genreID: 25,
-    genre: "Shoujo"
+    genre: "Shoujo",
   },
   {
     genreID: 26,
-    genre: "Shoujo Ai"
+    genre: "Shoujo Ai",
   },
   {
     genreID: 27,
-    genre: "Shounen"
+    genre: "Shounen",
   },
   {
     genreID: 28,
-    genre: "Shounen Ai"
+    genre: "Shounen Ai",
   },
   {
     genreID: 29,
-    genre: "Space"
+    genre: "Space",
   },
   {
     genreID: 30,
-    genre: "Sports"
+    genre: "Sports",
   },
   {
     genreID: 31,
-    genre: "Super Power"
+    genre: "Super Power",
   },
   {
     genreID: 32,
-    genre: "Vampire"
+    genre: "Vampire",
   },
   {
     genreID: 33,
-    genre: "Yaoi"
+    genre: "Yaoi",
   },
   {
     genreID: 34,
-    genre: "Yuri"
+    genre: "Yuri",
   },
   {
     genreID: 35,
-    genre: "Harem"
+    genre: "Harem",
   },
   {
     genreID: 36,
-    genre: "Slice Of Life"
+    genre: "Slice Of Life",
   },
   {
     genreID: 37,
-    genre: "Supernatural"
+    genre: "Supernatural",
   },
   {
     genreID: 38,
-    genre: "Military"
+    genre: "Military",
   },
   {
     genreID: 39,
-    genre: "Police"
+    genre: "Police",
   },
   {
     genreID: 40,
-    genre: "Psychological"
+    genre: "Psychological",
   },
   {
     genreID: 41,
-    genre: "Seinen"
+    genre: "Seinen",
   },
   {
     genreID: 42,
-    genre: "Josei"
+    genre: "Josei",
   },
   {
     genreID: 43,
-    genre: "Doujinshi"
+    genre: "Doujinshi",
   },
   {
     genreID: 43,
-    genre: "Gender Bender"
+    genre: "Gender Bender",
   },
   {
     genreID: 43,
-    genre: "Thriller"
+    genre: "Thriller",
   },
-]
+];

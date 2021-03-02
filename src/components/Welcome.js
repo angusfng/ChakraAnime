@@ -15,13 +15,19 @@ function Welcome() {
             Welcome to the ChakraAnime database
           </Heading>
           <Text fontSize="xl">Find your favourite anime here!</Text>
-          <Button size="lg" colorScheme="teal" mt="24px" as={RouterLink} to="/register">
+          <Button
+            size="lg"
+            colorScheme="teal"
+            mt="24px"
+            as={RouterLink}
+            to="/register"
+          >
             Join us!
           </Button>
         </Box>
       </Flex>
       {image && (
-        <Flex alignItems="center"  justifyContent="center">
+        <Flex alignItems="center" justifyContent="center">
           <Image w="55%" src={kakashi} alt="kakashi" />
         </Flex>
       )}

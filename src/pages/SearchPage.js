@@ -54,7 +54,7 @@ function SearchPage() {
         }
       }
     });
-  // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [pageNumber, query, type]);
 
   const handleNext = () => {
@@ -63,7 +63,13 @@ function SearchPage() {
 
   return (
     <Flex flexGrow="1" bg="gray.50" justifyContent="center" color="gray.700">
-      <Flex maxW="84rem" flexGrow="1" flexDirection="column" my="1rem">
+      <Flex
+        maxW="86rem"
+        flexGrow="1"
+        flexDirection="column"
+        my="1rem"
+        px="1rem"
+      >
         <Heading as="h1" mb="2rem">
           {title}
         </Heading>
@@ -71,8 +77,16 @@ function SearchPage() {
           dataLength={anime.length}
           next={handleNext}
           hasMore={hasMore}
-          loader={<Text fontSize="lg" fontWeight="bold" textAlign="center">Loading...</Text>}
-          endMessage={<Text fontSize="lg" fontWeight="bold" textAlign="center">Nothing to show!</Text>}
+          loader={
+            <Text fontSize="lg" fontWeight="bold" textAlign="center">
+              Loading...
+            </Text>
+          }
+          endMessage={
+            <Text fontSize="lg" fontWeight="bold" textAlign="center">
+              Nothing to show!
+            </Text>
+          }
         >
           <Grid templateColumns="repeat(auto-fit, minmax(10rem, 1fr))" gap={7}>
             {anime.map((res, idx) => (
