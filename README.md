@@ -1,6 +1,7 @@
 # ChakraAnime
 
 An anime database inspired by MyAnimeList and AniList. Discover new anime or search for an anime you already know.
+View the site at: https://chakraanime.netlify.app/
 
 ![](demo.gif)
 
