@@ -92,7 +92,7 @@ function Navbar() {
           </InputGroup>
         </StyledForm>
         {hamburger ? (
-          <Box>
+          <Box minW="max-content">
             <Button colorScheme="teal" mr="4" as={RouterLink} to="/register">
               Sign Up
             </Button>

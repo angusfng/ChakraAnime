@@ -24,7 +24,7 @@ function CharacterCard(props) {
       justifyContent="space-between"
     >
       <Flex w="50%">
-        <Image src={props.json.image_url} objectFit="cover" />
+        <Image src={props.json.image_url} objectFit="cover" w="3.5rem"/>
         <Flex flexDirection="column" justifyContent="space-between" p="0.5rem">
           <Text fontSize="xs">{props.json.name}</Text>
           <Text fontSize="xs" color="gray.500">{props.json.role}</Text>
@@ -38,6 +38,7 @@ function CharacterCard(props) {
         <Image
           src={va.image_url}
           objectFit="cover"
+          w="3.5rem"
         />
       </Flex>
     </Flex>
