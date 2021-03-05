@@ -39,7 +39,7 @@ function Login() {
         p="2rem"
         flexDirection="column"
         alignItems="center"
-        my="1rem"
+        m="1rem"
       >
         <Heading textAlign="center" mb="2rem">
           Login
