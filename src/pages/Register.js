@@ -34,7 +34,7 @@ function Register() {
         maxW="35rem"
         w="100%"
         bg="#fafafa"
-        boxShadow="lg"
+        boxShadow="outline"
         borderRadius="5px"
         p="2rem"
         flexDirection="column"

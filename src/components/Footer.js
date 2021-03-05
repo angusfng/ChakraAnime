@@ -5,8 +5,11 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
 } from "@chakra-ui/react";
+import { useHistory } from "react-router-dom";
 
 function Footer() {
+  let history = useHistory();
+
   return (
     <Flex
       h="7rem"
@@ -20,6 +23,7 @@ function Footer() {
           <BreadcrumbLink
             onClick={() => {
               window.scrollTo(0, 0);
+              history.push("/");
             }}
           >
             Home

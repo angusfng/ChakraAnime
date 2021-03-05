@@ -334,24 +334,24 @@ export const mangaGenreList = [
     genreID: 40,
     genre: "Psychological",
   },
-  {
-    genreID: 41,
-    genre: "Seinen",
-  },
-  {
-    genreID: 42,
-    genre: "Josei",
-  },
-  {
-    genreID: 43,
-    genre: "Doujinshi",
-  },
-  {
-    genreID: 43,
-    genre: "Gender Bender",
-  },
-  {
-    genreID: 43,
-    genre: "Thriller",
-  },
+  // {
+  //   genreID: 41,
+  //   genre: "Seinen",
+  // },
+  // {
+  //   genreID: 42,
+  //   genre: "Josei",
+  // },
+  // {
+  //   genreID: 43,
+  //   genre: "Doujinshi",
+  // },
+  // {
+  //   genreID: 43,
+  //   genre: "Gender Bender",
+  // },
+  // {
+  //   genreID: 43,
+  //   genre: "Thriller",
+  // },
 ];

@@ -8,8 +8,18 @@ import {
   Divider,
   Center,
 } from "@chakra-ui/react";
+import { useMediaQuery } from "@chakra-ui/react"
 
 function InformationCardOne(props) {
+  const [mobile] = useMediaQuery("(max-width: 1000px)");
+
+  const column = () => {
+    if (mobile) {
+      return "column"
+    }
+    return "row"
+  }
+
   return (
     <Flex
       bg="white"
@@ -22,7 +32,7 @@ function InformationCardOne(props) {
         Information
       </Heading>
       <Divider my="1rem" />
-      <Flex>
+      <Flex flexDirection={column}>
         <Center>
           <Image
             maxW="30rem"
